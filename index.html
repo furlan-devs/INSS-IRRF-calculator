@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <h1>Projetado para entregar o resultado de qualquer cálculo de INSS e IRRF de qualquer base informada.
+            </h1>
+        </div>
+        <nav class="menu">
+            <ul>
+        <li>INSS - progressivo</li>
+        <li>IRRF</li>
+            </ul>
+        </nav>
+
+    </header>
+<main>
+    <section id="previdencia">
+        <div>   
+            <h1>INSS</h1>
+            <h2>Os cálculos serão feitos de acordo com a tabela abaixo: </h2>
+            <p>até R$ 1.045,00	7,50%</p> 
+            <p>de R$ 1.045,01 até R$ 2.089,60	9%</p> 
+            <p>de R$ 2.089,61 até R$ 3.134,40	12%</p> 
+            <p>de R$ 3.134,41 até R$ 6.101,06	14%</p> 
+            </h2>
+        </div>
+        <div>
+            <p>Digite a base Bruta do INSS:</p>
+            <input type="number" id="salario-bruto" placeholder ="ex: 1000,00">
+            <input type="submit" onclick="valorINSS()" value="calcular">
+            <p id="valor-devido-inss"></p>
+
+        </div>
+    </section>
+    <section id="irrf-pf">
+        <div>   
+            <h1>IRRF</h1>
+            <h2>Os cálculos serão feitos de acordo com a tabela abaixo: </h2>
+            <p>Valor por dependente: R$ 189,59</p>
+            <p>Até 1.903,98	isento</p> 
+            <p>De 1.903,99 até 2.826,65     7,5%       142,80</p> 
+            <p>De 2.826,66 até 3.751,05     15%        354,80</p> 
+            <p>De 3.751,06 até 4.664,68     22,5%      636,13</p> 
+            <p>Acima de 4.664,68            27,5%      869,36</p>
+            </h2>
+        </div>
+        <div>
+            <p>Digite a base bruta do IRRF:</p>
+            <input type="number" id="base-irrf" placeholder ="ex: 1000,00"  >
+            <p>Valor do INSS descontado:</p>
+            <input type="number" id="inss-desc" placeholder ="0,00"  >
+            <p>Quantidade de Dependentes:</p>
+            <input type="number" id="qtd-dep" placeholder ="0,00" >
+            
+            <input type="submit" onclick="valorIRRF()" value="calcular">
+            <p id="valor-devido-irrf"></p>
+
+        </div>
+    </section>
+
+
+</main>
+
+
+
+</body>
+<script src="/js/script.js"></script>
+</html>
